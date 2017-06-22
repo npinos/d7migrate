@@ -1,0 +1,44 @@
+id: d7_main_content_beans
+label: Main content beans
+migration_tags:
+  - Drupal 7
+migration_group: d7_beans
+source:
+  plugin: d7_bean
+  bean_type: content
+process:
+  info: label
+  type: type
+  field_title: title
+## Custom fields
+  field_main_content_text:
+      plugin: iterator
+      source: field_main_content_text
+      process:
+        value: value
+        format:
+          plugin: default_value
+          default_value: full_html
+  field_main_content_links:
+    plugin: iterator
+    source: field_main_content_links
+    process:
+      uri: url
+      title: title
+      options: attributes
+  field_main_content_image:
+    plugin: iterator
+    source: field_main_content_image
+    process:
+      plugin: d7_file
+      target_id: fid
+      alt: alt
+      title: title
+      width: width
+      height: height
+destination:
+  plugin: entity:block_content
+  no_stub: true2
+migration_dependencies:
+  required: {  }
+  optional: {  }

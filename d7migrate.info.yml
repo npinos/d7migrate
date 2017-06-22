@@ -1,0 +1,8 @@
+name: Drupal 7 migration
+type: module
+description: Defines migration for D7 content.
+core: 8.x
+package: Custom
+dependencies:
+  - migrate_drupal
+  - migrate_plus
