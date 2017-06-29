@@ -59,7 +59,7 @@ class Bean extends FieldableEntity {
      * {@inheritdoc}
      */
     public function query() {
-        // Select node in its last revision.
+        // Select bean in its last revision.
         $query = $this->select('bean_revision', 'br')
             ->fields('b', [
                 'bid',
@@ -114,9 +114,7 @@ class Bean extends FieldableEntity {
             'revision_uid' => $this->t('Revision authored by (uid)'),
             'created' => $this->t('Created timestamp'),
             'changed' => $this->t('Modified timestamp'),
-            'revision' => $this->t('Create new revision'),
-            'field_billboard_subheading/value' => $this->t('Subheading value'),
-            'field_billboard_subheading/format' => $this->t('Subheading format')];
+            'revision' => $this->t('Create new revision')];
         return $fields;
     }
 
