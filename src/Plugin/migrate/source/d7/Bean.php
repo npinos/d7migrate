@@ -16,7 +16,8 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  * Drupal 7 Bean source from database.
  *
  * @MigrateSource(
- *   id = "d7_bean"
+ *   id = "d7_bean",
+ *   source_module = "bean"
  * )
  */
 class Bean extends FieldableEntity {
