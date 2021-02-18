@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\gutt_d9_migration\Plugin\migrate\source\d7;
+namespace Drupal\d7migrate\Plugin\migrate\source\d7;
 
 use Drupal\migrate\Row;
 use Drupal\Core\State\StateInterface;
